@@ -20,7 +20,7 @@ const Contacts = ({contacts, currUser, changeChat}) => {
     }
 
     return (<>
-    {
+    {   
         currUserImage && currUsername && 
         (
         <Container>

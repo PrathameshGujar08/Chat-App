@@ -15,7 +15,7 @@ try
     const emailCheck = await User.findOne({ email });
     if(emailCheck)
     {
-        return res.json({msg : "Username not available", status : false});
+        return res.json({msg : "Email not available", status : false});
     }
     const hashedPassword = await bycrypt.hash(password, 10);
 
@@ -66,9 +66,9 @@ module.exports.setAvatar = async (req, res, next) => {
 
             const userData = await User.findByIdAndUpdate( userID , { 
                 isAvatarImageSet : true, 
-                avatarImage,
-            });
-
+                avatarImage: avatarImage,
+            }, {new : true});
+            console.log(userData)
             return res.json({isSet : userData.isAvatarImageSet, 
             userImage : userData.avatarImage,
             });

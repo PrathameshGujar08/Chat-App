@@ -64,16 +64,14 @@ function Chat() {
 
   const handleChatChange = (chat) =>{
     setcurrChat(chat);
-
   }
 
   return (
     <>
       <Container>
         <div className="container">
-          
           <Contacts contacts = {contacts} currUser = {currUser} changeChat = {handleChatChange} />
-
+          {console.log(currUser)}
           {(isLoaded && (currChat === undefined))? (
           <Welcome currUser={currUser}/> )
           : (

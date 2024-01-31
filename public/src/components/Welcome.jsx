@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
-import Robot from "../assets/robot.gif";
+import welcome_panda from "../assets/welcome_panda.gif";
 
 export default function Welcome({currUser}) {
   return (
     <Container>
-        <img src={Robot} alt="robot" />
+        <img src={welcome_panda} alt="welcome_panda" />
         <h1>Welcome <span>{currUser.username}!</span></h1>
         <h2>Please select a user to start chatting..</h2>
     </Container>
@@ -17,12 +17,13 @@ display : flex;
 justify-content : center;
 align-items : center;
 flex-direction : column;
-color: white;
+color: #636363;
+border : 3px solid black;
 img{
     height: 20rem;
 }
 span{
-    color : #4E0EFF;
+    color : black;
 }
 `;
 

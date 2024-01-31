@@ -52,7 +52,7 @@ const Container = styled.div`
     display : grid;
     grid-template-columns : 5% 95%;
     align-items : center;
-    background-color : #080420;
+    background-color : black;
     padding : 0 2rem;
     padding-bottom : 0.3rem;
     .button-container {
@@ -66,13 +66,15 @@ const Container = styled.div`
                     font-size : 1.5rem;
                     color : yellow;
                     cursor : pointer;
+                    border-radius : 50%;
+                    border: 2px solid white;
                 }
                 .EmojiPickerReact {
                     position : absolute;
                     top : -470px; 
-                    background-color : #080420;
-                    box-shadow : 0 5px 10px #9A86F3;
-                    border-color : #9186F3;
+                    background-color : black;
+                    box-shadow : 0 5px 10px grey;
+                    border-color : black;
                     .emoji-categories{
                         button{
                             filter : contrast(0);
@@ -87,7 +89,7 @@ const Container = styled.div`
         display : flex;
         align-items : center;
         gap : 2rem;
-        background-color : #ffffff34;
+        background-color : grey;
         @media screen and (min-width: 720px) and (max-width: 1080px){
             padding : 0.1rem;
             gap : 1rem;
@@ -103,6 +105,9 @@ const Container = styled.div`
             &::selection{
                 background-color : #9186F3
             }
+            &::placeholder {
+            color: white;
+        }
             &: focus{
                 outline : none;
             }
@@ -112,8 +117,8 @@ const Container = styled.div`
             border-radius : 2rem;
             display : flex;
             justify-content : center;
-            background-color : #9A86F3;
-            border : none;
+            background-color : black;
+            border : 2px solid white;
             @media screen and (min-width: 720px) and (max-width: 1080px){
                 padding : 0.3rem 1rem;
                 svg{

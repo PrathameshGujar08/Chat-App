@@ -110,6 +110,7 @@ const Container = styled.div`
     padding : 1rem;
     display : grid;
     grid-template-rows : 10% 80% 10%;
+    border : 3px solid black;
     gap : 0.1rem;
     overflow : hidden;
     @media screen and (min-width: 720px) and (max-width: 1080px){
@@ -120,25 +121,30 @@ const Container = styled.div`
         justify-content : space-between;
         align-items : center;
         padding : 0 2rem;
+        border-bottom : 3px solid black;
         .user-details{
             display :flex;
             align-item :center;
             gap : 1rem;
             .avatar{
                 img{
-                   height : 3rem; 
+                   height : 3rem;
+                   border : 3px solid black;
+                   border-radius : 50%;
+
                 }
             }
             .username{
                 h3{
                 padding : 1rem 0rem;
-                color : white;
+                color : black;
                 }
             }
         }  
     }
     .chat-messages{
         padding : 1rem 2rem;
+        
         display : flex;
         flex-direction : column;
         gap : 0.8rem;
@@ -160,19 +166,19 @@ const Container = styled.div`
                 padding : 1rem;
                 font-size : 1.1rem;
                 border-radius : 1rem;
-                color : #d1d1d1
+                color : white
             }
         }
         .sended{
             justify-content : flex-end;
             .content{
-                background-color : #4F04FF21
+                background-color : black
             }
         }
         .recieved{
             justify-content : flex-start;
             .content{
-                background-color : #9900FF20;
+                background-color : grey;
             }
         }
     }

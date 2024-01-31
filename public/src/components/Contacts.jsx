@@ -26,7 +26,7 @@ const Contacts = ({contacts, currUser, changeChat}) => {
         <Container>
         <div className="brand">
                     <img src={Logo} alt="logo" />
-                    <h3>snappy</h3>
+                    <h3>dozy panda</h3>
                 </div>
                 <div className="contacts">
                     {
@@ -67,17 +67,19 @@ const Container = styled.div`
     display : grid;
     grid-template-rows : 10% 75% 15%;
     overflow : hidden;
-    background-color : #080420;
+    background-color : white;
     .brand{
         display : flex;
         align-items : center;
         justify-content : center;
+        border : 3px solid black;
+        background-color : #909090;
         gap : 1rem;
         img {
             height : 2rem;
         }        
         h3{
-            color : white;
+            color : black;
             text-transform : uppercase;
         }
     }
@@ -85,8 +87,10 @@ const Container = styled.div`
         display : flex;
         flex-direction : column;
         align-items : center;
+        padding-top : 1rem;
         overflow : auto;
         gap : 0.8rem;
+        border : 3px solid black;
         &::-webkit-scrollbar{
             width : 0.2rem;
             &-thumb{
@@ -98,6 +102,7 @@ const Container = styled.div`
         .contact {
             display : flex;
             background-color : #ffffff39;
+            border : 3px solid black;
             min-height : 5rem;
             width : 90%;
             cursor : pointer;
@@ -110,34 +115,39 @@ const Container = styled.div`
 
                 img{
                     height : 3rem;
+                    border : 2px solid black;
+                    border-radius : 50%;
 
                 }
             }
             .username{
                 h3{
-                    color : white;
+                    color : black;
                 }
             }
         }
         .selected {
-            background-color : #9186F3;
+            background-color : #bebebe;
         }
     }
     .current-user{
-        background-color : #0d0d30;
+        background-color : #909090;
         display : flex;
         align-items : center;
         justify-content : center;
+        border : 3px solid black;
         gap : 2rem;
         .avatar{
             img{
                 height : 4rem;
                 max-inline-size : 100%;
+                border : 2px solid black;
+                border-radius : 50%;
             }
         }
         .username{
             h2{
-                color : white;
+                color : black;
             }
         }
         @media screen and (min-width: 720px) and (max-width: 1080px){

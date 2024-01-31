@@ -55,7 +55,7 @@ export default function SetAvatar() {
       }
       }
     };
-    
+     
     // Here the mistake was to use async directly with useEffect which would give you destroy object not found error.
     const fetchAvatars = async () => {
       const data = [];
@@ -91,8 +91,13 @@ export default function SetAvatar() {
     {
         (isLoading)?
         <Container>
-          <img src={Loader} alt="loader" />
-        </Container> :
+        <h1>Lazy panda is fetching Avatars for you....</h1>
+          <img src={Loader} alt="loader" style = {{
+            width : "200px",
+            height : "auto",
+          }}/>
+        </Container> 
+        :
         (<Container>
             <div className="title-container">
               <h1>Pick an Avatar for you</h1>
@@ -129,7 +134,7 @@ export default function SetAvatar() {
       align-items : center;
       flex-direction : column;
       gap : 3 rem;
-      background-color : #131324;
+      background-color : white;
       height : 100vh;
       width : 100vw;
       .loader{
@@ -138,7 +143,7 @@ export default function SetAvatar() {
 
       .title-container{
         h1{
-          color : white;
+          color : black;
           padding : 2rem;
           }
       }
@@ -146,6 +151,7 @@ export default function SetAvatar() {
       .avatars{
         display : flex;
         gap : 2rem;
+        padding: 2rem;
 
         .avatar{
           border : 0.4 rem solid tranparent;
@@ -164,13 +170,13 @@ export default function SetAvatar() {
         }
 
         .selected {
-          border : 0.2rem solid #4e0eff;
+          border : 0.2rem solid black;
         }
       }
 
       button{
         position:flex;
-        background-color : #580391;
+        background-color : black;
         padding : 1rem 2rem;
         font-size : 1rem;
         color : white;

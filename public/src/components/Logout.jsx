@@ -23,12 +23,12 @@ const Button = styled.button`
     align-items : center;
     padding : 0.5rem;
     border-radius : 0.5rem;
-    background-color : #9A86F3;
+    background-color : black;
     border : none;
     cursor : pointer;
     svg {
         font-size : 1.3rem;
-        color : #EBE7FF;
+        color : white;
     }   
 `
 

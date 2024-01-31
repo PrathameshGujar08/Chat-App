@@ -3,6 +3,7 @@ import { Link , useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import axios from 'axios'
 import Logo from "../assets/logo.svg"
+import register_bg from "../assets/register_bg.jpg"
 import { ToastContainer, toast } from 'react-toastify'; // Toastcontainer is component to show the error notif which is default at top right we need to change it if needed (Read docs)
 import 'react-toastify/dist/ReactToastify.css';
 import { loginRoute } from '../utils/APIRoutes';
@@ -75,11 +76,16 @@ function Login() {
 
   return (
     <>
-    <FormContainer>
+      <FormContainer style={{  
+  backgroundImage: `url(${register_bg})`,
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat'
+}}>
       <form onSubmit={(event) => handleSubmit(event)}>
         <div className="brand">
           <img src={Logo} alt="logo" />
-          <h1>snappy</h1>
+          <h1>dozy panda</h1>
         </div>
         <input 
         type="text" 
@@ -115,7 +121,7 @@ const FormContainer = styled.div`
   justify-content : center;
   gap : 1rem;
   align-items : center;
-  background-color : #131324;
+  background-color : white;
   .brand{
     display : flex;
     align-items : center;
@@ -133,25 +139,25 @@ const FormContainer = styled.div`
     display : flex;
     flex-direction : column;
     gap: 2rem;
-    background-color: #00000076;
+    background-color: #bebebe;
     border-radius : 30px;
     padding: 3rem 5rem;
     input{
-      background-color: transparent;
+      ${'' /* background-color: transparent; */}
       padding : 1rem;
       border-radius : 1rem;
-      border : 0.1rem solid blue; 
+      border : 0.1rem solid black; 
       ${'' /* border : border-width border-style border color */}
-      color : white;
+      color : black;
       width : 100%;
       font-size : 1rem;
       &:focus{
-        border : 0.1rem solid yellow;
+        border : 0.1rem dashed black;
         outline : none;
       }
     }
     button{
-      background-color : #580391;
+      background-color : black;
       padding : 1rem 2rem;
       font-size : 1rem;
       width:100%;
@@ -163,16 +169,17 @@ const FormContainer = styled.div`
       text-transform : uppercase;
       transition : 0.5s ease-in-out;
       &:hover{
-        background-color : #f5fa5f;
-        color: black;
+        ${'' /* background-color : #f5fa5f;
+        color: black; */}
       }
     }
     span{
-      color : #ffda08;
+      color : black;
       padding : 0.5rem;
       text-transform : uppercase;
       a{
         font-weight : bold;
+        color:black
       }
     }
   }

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import chat_bg from "../assets/chat_bg.jpg"
 import { allUsersRoute, host } from '../utils/APIRoutes'
 import Contacts from '../components/Contacts'
 import Welcome from '../components/Welcome'
@@ -68,7 +69,12 @@ function Chat() {
 
   return (
     <>
-      <Container>
+        <Container style={{  
+        backgroundImage: `url(${chat_bg})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+        }}>
         <div className="container">
           <Contacts contacts = {contacts} currUser = {currUser} changeChat = {handleChatChange} />
           {console.log(currUser)}
@@ -98,7 +104,7 @@ const Container = styled.div`
     .container{
       height : 85vh;
       width : 85vw;
-      background-color : #00000076;
+      background-color : white;
       display : grid;
       grid-template-columns : 25% 75%;
       @media screen and (min-width: 720px) and (max-width: 1080px){
